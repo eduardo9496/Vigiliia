@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styleSec5.css">
+  <title>Document</title>
+</head>
+
+<body class="fade-in">
+  <nav class="sidebar">
+    <a href="index.html" draggable="false">
+      <div class="logo"><img src="image/pantInicial/logo.png" alt=""></div>
+    </a>
+    <ul class="nav-links">
+
+      <li><a href="seccion2.html" draggable="false"><img src="image/botones_barra_nav/Noticias.png" alt="Noticias"
+            data-hover="image/botones_barra_nav/Noticias_Selec.png"></a></li>
+      <li><a href="seccion3.html" draggable="false"><img src="image/botones_barra_nav/Historia.png" alt="Galería"
+            data-hover="image/botones_barra_nav/Historia_Selec.png"></a></li>
+      <li><a href="seccion4.html" draggable="false"><img src="image/botones_barra_nav/Galería.png" alt="Historia"
+            data-hover="image/botones_barra_nav/Galeria_Selec.png"></a></li>
+      <li><a href="seccion5.html" draggable="false"><img src="image/botones_barra_nav/Temporizador_mar.png" alt="Mapa"
+            data-hover="image/botones_barra_nav/Temporizador_mar.png"></a></li>
+      <li><a href="seccion6.html" draggable="false"><img src="image/botones_barra_nav/Mapa.png" alt="Temporizador"
+            data-hover="image/botones_barra_nav/Mapa_Selec.png"></a></li>
+      <li><a href="seccion7.html" draggable="false"><img src="image/botones_barra_nav/Tem.png" alt="Contacto"
+            data-hover="image/botones_barra_nav/Tem_Selec.png"></a></li>
+    </ul>
+  </nav>
+
+  <main class="content">
+        <div class="anuncio1">
+            <img src="image/card_para_anuncios/Cuadro de texto.png" alt="">
+            <div class="ilustracion_ejem1">
+                <img src="image/card_para_anuncios/ilustracion_ejem.png" alt="">
+            </div>
+            <div class="titulo_anuncio1">
+                <h1>CRONOGRAMA </h1>
+            </div>
+
+            <div class="texto_anuncio1">
+                <img src="image/card_para_anuncios/Listado_cronograma.png" alt="">
+            </div>
+        </div>
+  </main>
+  <script>
+    const buttons = document.querySelectorAll('.nav-links img');
+
+    buttons.forEach(button => {
+      const original = button.src;
+      const hoverSrc = button.dataset.hover;
+
+      button.addEventListener('mouseenter', () => {
+        button.src = hoverSrc;
+      });
+
+      button.addEventListener('mouseleave', () => {
+        button.src = original;
+      });
+    });
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styleSec2.css">
+    <title>Document</title>
+</head>
+
+<body class="fade-in">
+
+
+    <nav class="sidebar">
+        <a href="index.html" draggable="false">
+            <div class="logo"><img src="image/pantInicial/logo.png" alt=""></div>
+        </a>
+        <ul class="nav-links">
+
+            <li><a href="seccion2.html" draggable="false"><img src="image/botones_barra_nav/Noticias_marc.png"
+                        alt="Noticias" data-hover="image/botones_barra_nav/Noticias_marc.png"></a></li>
+            <li><a href="seccion3.html" draggable="false"><img src="image/botones_barra_nav/Historia.png" alt="Galería"
+                        data-hover="image/botones_barra_nav/Historia_Selec.png"></a></li>
+            <li><a href="seccion4.html" draggable="false"><img src="image/botones_barra_nav/Galería.png" alt="Historia"
+                        data-hover="image/botones_barra_nav/Galeria_Selec.png"></a></li>
+            <li><a href="seccion5.html" draggable="false"><img src="image/botones_barra_nav/Temporizador.png" alt="Mapa"
+                        data-hover="image/botones_barra_nav/Temporizador_Selec.png"></a></li>
+            <li><a href="seccion6.html" draggable="false"><img src="image/botones_barra_nav/Mapa.png" alt="Temporizador"
+                        data-hover="image/botones_barra_nav/Mapa_Selec.png"></a></li>
+            <li><a href="seccion7.html" draggable="false"><img src="image/botones_barra_nav/Tem.png" alt="Contacto"
+                        data-hover="image/botones_barra_nav/Tem_Selec.png"></a></li>
+
+        </ul>
+    </nav>
+
+    <main class="content">
+        <div class="seccion1">
+            <img src="image/noticias/Cuadro de texto.png" alt="">
+            <div class="ilustrativa">
+                <img  src="image/noticias/ilustrativa_notic.png" alt="">
+            </div>
+            <h1 class="titulo">Este jueves 20 de noviembre,<br>celebramos el Día de los Guardianes</h1>
+            <p class="parrafo">En conmemoración por los 30 años desde su creación, los Guardianes le han dado esperanza a la humanidad. Sus habilidades permitieron avanzar en la restauración de los ecosistemas exteriores, y nos preparamos para presentar las últimas novedades que trae la última campaña enviada.</p>
+        </div>
+
+        <div class="seccion2">
+            <img src="image/noticias/Cuadro de texto 2.png" alt="">
+        </div>
+
+        <div class="seccion3">
+            <img src="image/noticias/Cuadro de texto3.png" alt="">
+        </div>
+
+        <div class="seccion4">
+            <img src="image/noticias/Cuadro de texto4.png" alt="">
+        </div>
+    </main>
+
+    <script>
+        const buttons = document.querySelectorAll('.nav-links img');
+
+        buttons.forEach(button => {
+            const original = button.src;
+            const hoverSrc = button.dataset.hover;
+
+            button.addEventListener('mouseenter', () => {
+                button.src = hoverSrc;
+            });
+
+            button.addEventListener('mouseleave', () => {
+                button.src = original;
+            });
+        });
+
+    </script>
+</body>
+
+</html>

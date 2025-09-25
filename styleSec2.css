@@ -1,0 +1,208 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+@font-face {
+  font-family: 'MiFuente';
+  src: url('fonts/Quattrocento-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'MiFuente';
+  src: url('fonts/Quattrocento-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+body {
+    display: flex;
+
+    height: 96vh;
+
+    background-image: url("image/fondoPantallas.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+/* Animaciones de entrada/salida */
+body.fade-in {
+    animation: fadeIn 1.8s forwards;
+}
+
+body.fade-out {
+    animation: fadeOut 1.8s forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
+
+
+
+img {
+    -webkit-user-drag: none;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    cursor: default;
+    outline: none;
+}
+
+.sidebar{
+    position: fixed;
+    top: 40px;
+}
+
+.sidebar .logo {
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.sidebar .nav-links {
+    list-style: none;
+    width: 100%;
+}
+
+.sidebar .nav-links li {
+    margin: 20px 0;
+    text-align: center;
+}
+
+/* Zig-zag: alterna margen izquierdo */
+.sidebar .nav-links li:nth-child(odd) a img {
+    margin-left: 0px;
+}
+
+.sidebar .nav-links li:nth-child(even) a img {
+    margin-left: 90px;
+    /* desplazamiento hacia la derecha */
+}
+
+/* Botones con transición */
+.sidebar .nav-links a img {
+    width: 70px;
+    height: 70px;
+    transition: transform 0.3s, margin-left 0.3s;
+}
+
+/* Hover: escala y mantiene zig-zag */
+.sidebar .nav-links a img:hover {
+    transform: scale(1.2);
+}
+
+.content {
+    margin-left: 80px;
+    padding: 20px;
+}
+
+.seccion1 {
+    position: absolute;
+    top: 25px;
+    left: 200px;
+}
+
+.seccion1 img {
+    width: 960px;
+    height: 690px;
+}
+
+.seccion2 {
+    position: absolute;
+    top: 25px;
+    left: 1230px;
+}
+
+.seccion2 img {
+    width: 300px;
+    height: 350px;
+}
+
+.seccion3 {
+    position: absolute;
+    top: 390px;
+    left: 1230px;
+}
+
+.seccion3 img {
+    width: 300px;
+    height: 150px;
+}
+
+.seccion4 {
+    position: absolute;
+    top: 555px;
+    left: 1230px;
+}
+
+.seccion4 img {
+    width: 300px;
+    height: 155px;
+}
+
+.logo img {
+    margin: 4px;
+    width: 90px;
+    height: auto;
+}
+
+.ilustrativa {
+    position: absolute;
+    top: 10px;
+}
+
+.ilustrativa img {
+    position: absolute;
+    width: 900px;
+    height: 400px;
+    top: 40px;
+    left: 30px;
+}
+
+.titulo {
+    position: absolute;
+    font-family: 'MiFuente', monospace;
+    width: 900px;
+    top: 320px;
+    left: 80px;
+    font-size: 48px;
+    color: white;
+    
+}
+
+.parrafo {
+    position: absolute;
+    font-family: 'MiFuente', monospace;
+    width: 900px;
+    height: auto;
+    top: 480px;
+    left: 28px;
+    font-size: 18px;
+    color: white;
+    text-align: justify;
+}
+

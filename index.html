@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>La Vigilia</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="fade-in">
+
+  <canvas id="worm"></canvas>
+  <!-- Botones -->
+  <a href="seccion4.html" draggable="false">
+    <div class="button-circle btn1" onclick="goToScreen(1)"> </div>
+  </a>
+  <div class="logoCen"><img src="image/pantInicial/logo.png" alt=""></div>
+  <a href="seccion3.html" draggable="false">
+    <div class="button-circle btn3" onclick="goToScreen(3)"> </div>
+  </a>
+  <a href="seccion2.html" draggable="false">
+    <div class="button-circle btn4" onclick="goToScreen(4)"> </div>
+  </a>
+  <a href="seccion5.html" draggable="false">
+    <div class="button-circle btn5" onclick="goToScreen(5)"> </div>
+  </a>
+  <a href="seccion6.html" draggable="false">
+    <div class="button-circle btn6" onclick="goToScreen(6)"> </div>
+  </a>
+  <a href="seccion7.html" draggable="false">
+    <div class="button-circle btn7" onclick="goToScreen(7)"> </div>
+  </a>
+
+  <script src="script.js">
+    // Transición de salida al hacer click en enlaces
+    document.querySelectorAll("a").forEach(link => {
+      link.addEventListener("click", function (e) {
+        const href = this.getAttribute("href");
+
+        // si es un link interno (html), animamos
+        if (href && href.endsWith(".html")) {
+          e.preventDefault();
+          document.body.classList.add("fade-out");
+
+          setTimeout(() => {
+            window.location.href = href;
+          }, 1800); // mismo tiempo que la animación CSS
+        }
+      });
+    });
+
+  </script>
+</body>
+
+</html>

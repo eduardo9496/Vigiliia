@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styleSec4.css">
+  <title>Document</title>
+</head>
+
+<body class="fade-in">
+  <nav class="sidebar">
+    <a href="index.html" draggable="false">
+      <div class="logo"><img src="image/pantInicial/logo.png" alt=""></div>
+    </a>
+    <ul class="nav-links">
+
+      <li><a href="seccion2.html" draggable="false"><img src="image/botones_barra_nav/Noticias.png" alt="Noticias"
+            data-hover="image/botones_barra_nav/Noticias_Selec.png"></a></li>
+      <li><a href="seccion3.html" draggable="false"><img src="image/botones_barra_nav/Historia.png" alt="Galería"
+            data-hover="image/botones_barra_nav/Historia_Selec.png"></a></li>
+      <li><a href="seccion4.html" draggable="false"><img src="image/botones_barra_nav/Galeria_marc.png" alt="Historia"
+            data-hover="image/botones_barra_nav/Galeria_marc.png"></a></li>
+      <li><a href="seccion5.html" draggable="false"><img src="image/botones_barra_nav/Temporizador.png" alt="Mapa"
+            data-hover="image/botones_barra_nav/Temporizador_Selec.png"></a></li>
+      <li><a href="seccion6.html" draggable="false"><img src="image/botones_barra_nav/Mapa.png" alt="Temporizador"
+            data-hover="image/botones_barra_nav/Mapa_Selec.png"></a></li>
+      <li><a href="seccion7.html" draggable="false"><img src="image/botones_barra_nav/Tem.png" alt="Contacto"
+            data-hover="image/botones_barra_nav/Tem_Selec.png"></a></li>
+    </ul>
+  </nav>
+
+  <main class="content">
+    <div class="anuncio1">
+      <img src="image/card_para_anuncios/Cuadro de texto.png" alt="">
+      <div class="ilustracion_ejem1">
+        <img src="image/card_para_anuncios/ilustracion_ejem.png" alt="">
+      </div>
+      <div class="titulo_anuncio1">
+        <h1>El combustible del cambio</h1>
+      </div>
+
+      <div class="texto_anuncio1">
+        <p>No hay organismo que no requiera una fuente de energía para seguir viviendo y funcionando, y esto no excluye a los Guardianes. Su fuente de poder requiere una recarga luego de cada extensa campaña. <br> <br>
+Luego de su cálida bienvenida, los Guardianes regresan al Centro de Comando, donde se analizan sus estados y los datos de sus aventuras, a la par que reciben una buena recarga de energía para seguir con su función. </p>
+      </div>
+    </div>
+  </main>
+
+  <script>
+
+    const buttons = document.querySelectorAll('.nav-links img');
+
+    buttons.forEach(button => {
+      const original = button.src;
+      const hoverSrc = button.dataset.hover;
+
+      button.addEventListener('mouseenter', () => {
+        button.src = hoverSrc;
+      });
+
+      button.addEventListener('mouseleave', () => {
+        button.src = original;
+      });
+    });
+
+  </script>
+
+</body>
+
+</html>

@@ -1,0 +1,144 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+@font-face {
+  font-family: 'MiFuente';
+  src: url('fonts/Quattrocento-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'MiFuente';
+  src: url('fonts/Quattrocento-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+
+body {
+  display: flex;
+  font-family: 'MiFuente', sans-serif;
+  height: 96vh;
+  background-image: url("image/fondoTemporizador.png"); 
+  background-size: cover;   
+  background-position: center; 
+  background-repeat: no-repeat; 
+  background-attachment: fixed;
+}
+
+body.fade-in {
+    animation: fadeIn 1.8s forwards;
+}
+
+body.fade-out {
+    animation: fadeOut 1.8s forwards;
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes fadeOut {
+  from { opacity: 1; }
+  to   { opacity: 0; }
+}
+
+
+img {
+  -webkit-user-drag: none; 
+  user-select: none;        
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  cursor: default;          
+  outline: none;            
+}
+.sidebar{
+    position: fixed;
+    top: 40px;
+}
+
+.sidebar .logo {
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.sidebar .nav-links {
+    list-style: none;
+    width: 100%;
+}
+
+.sidebar .nav-links li {
+    margin: 20px 0;
+    text-align: center;
+}
+
+/* Zig-zag: alterna margen izquierdo */
+.sidebar .nav-links li:nth-child(odd) a img {
+    margin-left: 0px;
+}
+
+.sidebar .nav-links li:nth-child(even) a img {
+    margin-left: 90px; /* desplazamiento hacia la derecha */
+}
+
+/* Botones con transición */
+.sidebar .nav-links a img {
+    width: 70px;
+    height: 70px;
+    transition: transform 0.3s, margin-left 0.3s;
+}
+
+/* Hover: escala y mantiene zig-zag */
+.sidebar .nav-links a img:hover {
+    transform: scale(1.2);
+}
+
+.content {
+    margin-left: 80px;
+    padding: 20px;
+}
+
+.logo img {
+  margin: 4px;  
+  width: 90px;
+  height: auto;
+}
+
+.anuncio1 img {
+    position: absolute;
+    width: 900px;
+    height: 700px;
+    left: 250px;
+}
+
+.ilustracion_ejem1 img {
+    position: absolute;
+    width: 800px;
+    height: 300px;
+    left: 300px;
+    top: 60px;
+}
+
+.titulo_anuncio1{
+    position: absolute;
+    left: 310px;
+    top: 260px;
+    font-size: 25px;
+    color: white;
+    font-family: 'MiFuente', monospace;
+}
+
+.texto_anuncio1 img{
+    position: absolute;
+    left: 300px;
+    top: 380px;
+    width: 600px;
+    height: 300px;
+}

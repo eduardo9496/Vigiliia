@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styleSec7.css">
+  <title>Document</title>
+</head>
+
+<body class="fade-in">
+  <nav class="sidebar">
+    <a href="index.html" draggable="false">
+      <div class="logo"><img src="image/pantInicial/logo.png" alt=""></div>
+    </a>
+    <ul class="nav-links">
+
+      <li><a href="seccion2.html" draggable="false"><img src="image/botones_barra_nav/Noticias.png" alt="Noticias"
+            data-hover="image/botones_barra_nav/Noticias_Selec.png"></a></li>
+      <li><a href="seccion3.html" draggable="false"><img src="image/botones_barra_nav/Historia.png" alt="Galería"
+            data-hover="image/botones_barra_nav/Historia_Selec.png"></a></li>
+      <li><a href="seccion4.html" draggable="false"><img src="image/botones_barra_nav/Galería.png" alt="Historia"
+            data-hover="image/botones_barra_nav/Galeria_Selec.png"></a></li>
+      <li><a href="seccion5.html" draggable="false"><img src="image/botones_barra_nav/Temporizador.png" alt="Mapa"
+            data-hover="image/botones_barra_nav/Temporizador_Selec.png"></a></li>
+      <li><a href="seccion6.html" draggable="false"><img src="image/botones_barra_nav/Mapa.png" alt="Temporizador"
+            data-hover="image/botones_barra_nav/Mapa_Selec.png"></a></li>
+      <li><a href="seccion7.html" draggable="false"><img src="image/botones_barra_nav/Tem_mar.png" alt="Contacto"
+            data-hover="image/botones_barra_nav/Tem_mar.png"></a></li>
+    </ul>
+  </nav>
+
+  <main class="content">
+    <div class="temporizador">
+      <img src="image/temporizador/Base.png" alt="">
+      <div class="texto-temporizador">Tiempo restante para la llegada</div>
+      <div class="timer" id="timer">57d 03:08:41</div>
+    </div>
+  </main>
+  <script>
+    const buttons = document.querySelectorAll('.nav-links img');
+
+    buttons.forEach(button => {
+      const original = button.src;
+      const hoverSrc = button.dataset.hover;
+
+      button.addEventListener('mouseenter', () => {
+        button.src = hoverSrc;
+      });
+
+      button.addEventListener('mouseleave', () => {
+        button.src = original;
+      });
+    });
+
+    // Configuración inicial del temporizador: 57 días, 3 horas, 8 min, 41 seg
+    let totalSeconds = (57 * 24 * 60 * 60) + (3 * 3600) + (8 * 60) + 41;
+
+    function updateTimer() {
+      if (totalSeconds <= 0) {
+        document.getElementById("timer").textContent = "¡Tiempo terminado!";
+        clearInterval(interval);
+        return;
+      }
+
+      const days = Math.floor(totalSeconds / (24 * 60 * 60));
+      const hours = Math.floor((totalSeconds % (24 * 60 * 60)) / 3600);
+      const minutes = Math.floor((totalSeconds % 3600) / 60);
+      const seconds = totalSeconds % 60;
+
+      document.getElementById("timer").textContent =
+        `${days}d ${String(hours).padStart(2, "0")}:${String(minutes).padStart(2, "0")}:${String(seconds).padStart(2, "0")}`;
+
+      totalSeconds--; // Reducir 1 segundo
+    }
+
+    const interval = setInterval(updateTimer, 1000);
+    updateTimer(); // Mostrar de entrada
+
+  </script>
+</body>
+
+</html>

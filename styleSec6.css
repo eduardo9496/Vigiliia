@@ -1,0 +1,327 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+@font-face {
+  font-family: 'MiFuente';
+  src: url('fonts/Quattrocento-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'MiFuente';
+  src: url('fonts/Quattrocento-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+body {
+    display: flex;
+    height: 96vh;
+
+    background-image: url("image/fondoPantallas.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+}
+
+body.fade-in {
+    animation: fadeIn 1.8s forwards;
+}
+
+body.fade-out {
+    animation: fadeOut 1.8s forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
+
+/* Scrollbar para Chrome, Edge, Brave, Safari */
+::-webkit-scrollbar {
+  width: 12px; /* grosor de la barra */
+}
+
+/* Track con fondo negro */
+::-webkit-scrollbar-track {
+  background: rgb(0, 0, 0); /* negro semi-transparente */
+  border-radius: 8px;
+}
+
+/* Thumb visible */
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #0ff, #00f); /* degradado futurista */
+  border-radius: 10px;
+  box-shadow: 0 0 10px #0ff, 0 0 20px #00f;
+}
+
+/* Hover sobre la barra */
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #0ff, #0f0);
+  box-shadow: 0 0 15px #0ff, 0 0 25px #0f0;
+}
+
+/* Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #0ff rgba(0,0,0); /* thumb visible, track negro */
+}
+
+
+img {
+    -webkit-user-drag: none;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    cursor: default;
+    outline: none;
+}
+
+.sidebar {
+    position: fixed;
+    top: 40px;
+}
+
+.sidebar .logo {
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.sidebar .nav-links {
+    list-style: none;
+    width: 100%;
+}
+
+.sidebar .nav-links li {
+    margin: 20px 0;
+    text-align: center;
+}
+
+/* Zig-zag: alterna margen izquierdo */
+.sidebar .nav-links li:nth-child(odd) a img {
+    margin-left: 0px;
+}
+
+.sidebar .nav-links li:nth-child(even) a img {
+    margin-left: 90px;
+    /* desplazamiento hacia la derecha */
+}
+
+/* Botones con transición */
+.sidebar .nav-links a img {
+    width: 70px;
+    height: 70px;
+    transition: transform 0.3s, margin-left 0.3s;
+}
+
+/* Hover: escala y mantiene zig-zag */
+.sidebar .nav-links a img:hover {
+    transform: scale(1.2);
+}
+
+.content {
+    margin-left: 80px;
+    padding: 20px;
+}
+
+.logo img {
+    margin: 4px;
+    width: 90px;
+    height: auto;
+}
+
+.anuncio1 img {
+    position: absolute;
+    left: 200px;
+    width: 600px;
+    height: 450px;
+}
+
+.anuncio2 img {
+    position: absolute;
+    width: 600px;
+    height: 450px;
+    left: 860px;
+}
+
+.anuncio3 img {
+    position: absolute;
+    width: 600px;
+    height: 450px;
+    left: 200px;
+    top: 500px;
+}
+
+.anuncio4 img {
+    position: absolute;
+    width: 600px;
+    height: 450px;
+    left: 200px;
+    top: 980px;
+}
+
+.anuncio5 img {
+    position: absolute;
+    width: 600px;
+    height: 450px;
+    left: 860px;
+    top: 980px;
+}
+
+.anuncio6 img {
+    position: absolute;
+    width: 600px;
+    height: 450px;
+    left: 200px;
+    top: 1460px;
+}
+
+
+.titulo_card1 h1 {
+    position: absolute;
+    left: 220px;
+    top: 290px;
+    font-family: 'MiFuente', monospace;
+    font-size: 32px;
+    color: white;
+}
+
+.texto_card1 p {
+    position: absolute;
+    left: 220px;
+    top: 340px;
+    width: 550px;
+    font-family: 'MiFuente', monospace;
+    font-size: 18px;
+    color: white;
+    text-align: justify;
+    line-height: 1.4;
+}
+
+.titulo_card2 h1 {
+    position: absolute;
+    left: 880px;
+    top: 290px;
+    font-family: 'MiFuente', monospace;
+    font-size: 32px;
+    color: white;
+}
+
+.texto_card2 p {
+    position: absolute;
+    left: 880px;
+    top: 340px;
+    width: 550px;
+    font-family: 'MiFuente', monospace;
+    font-size: 18px;
+    color: white;
+    text-align: justify;
+    line-height: 1.4;
+}
+
+.titulo_card3 h1 {
+    position: absolute;
+    left: 220px;
+    top: 750px;
+    font-family: 'MiFuente', monospace;
+    font-size: 32px;
+    color: white;
+}
+
+.texto_card3 p {
+    position: absolute;
+    left: 220px;
+    top: 800px;
+    width: 550px;
+    font-family: 'MiFuente', monospace;
+    font-size: 18px;
+    color: white;
+    text-align: justify;
+    line-height: 1.4;
+}
+
+.titulo_card4 h1 {
+    position: absolute;
+    left: 220px;
+    top: 1240px;
+    font-family: 'MiFuente', monospace;
+    font-size: 32px;
+    color: white;
+}
+
+.texto_card4 p {
+    position: absolute;
+    left: 220px;
+    top: 1300px;
+    width: 550px;
+    font-family: 'MiFuente', monospace;
+    font-size: 18px;
+    color: white;
+    text-align: justify;
+    line-height: 1.4;
+}
+
+.titulo_card5 h1 {
+    position: absolute;
+    left: 880px;
+    top: 1240px;
+    font-family: 'MiFuente', monospace;
+    font-size: 32px;
+    color: white;
+}
+
+.texto_card5 p {
+    position: absolute;
+    left: 880px;
+    top: 1300px;
+    width: 550px;
+    font-family: 'MiFuente', monospace;
+    font-size: 18px;
+    color: white;
+    text-align: justify;
+    line-height: 1.4;
+}
+
+.titulo_card6 h1 {
+    position: absolute;
+    left: 220px;
+    top: 1710px;
+    font-family: 'MiFuente', monospace;
+    font-size: 32px;
+    color: white;
+}
+
+.texto_card6 p {
+    position: absolute;
+    left: 220px;
+    top: 1775px;
+    width: 550px;
+    font-family: 'MiFuente', monospace;
+    font-size: 18px;
+    color: white;
+    text-align: justify;
+    line-height: 1.4;
+}

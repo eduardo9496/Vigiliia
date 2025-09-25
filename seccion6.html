@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styleSec6.css">
+    <title>Document</title>
+</head>
+
+<body class="fade-in">
+    <div class="scroll-trail"></div>
+    <nav class="sidebar">
+        <a href="index.html" draggable="false">
+            <div class="logo"><img src="image/pantInicial/logo.png" alt=""></div>
+        </a>
+        <ul class="nav-links">
+
+            <li><a href="seccion2.html" draggable="false"><img src="image/botones_barra_nav/Noticias.png" alt="Noticias"
+                        data-hover="image/botones_barra_nav/Noticias_Selec.png"></a></li>
+            <li><a href="seccion3.html" draggable="false"><img src="image/botones_barra_nav/Historia.png" alt="Galería"
+                        data-hover="image/botones_barra_nav/Historia_Selec.png"></a></li>
+            <li><a href="seccion4.html" draggable="false"><img src="image/botones_barra_nav/Galería.png" alt="Historia"
+                        data-hover="image/botones_barra_nav/Galeria_Selec.png"></a></li>
+            <li><a href="seccion5.html" draggable="false"><img src="image/botones_barra_nav/Temporizador.png" alt="Mapa"
+                        data-hover="image/botones_barra_nav/Temporizador_Selec.png"></a></li>
+            <li><a href="seccion6.html" draggable="false"><img src="image/botones_barra_nav/Mapa_marc.png"
+                        alt="Temporizador" data-hover="image/botones_barra_nav/Mapa_marc.png"></a></li>
+            <li><a href="seccion7.html" draggable="false"><img src="image/botones_barra_nav/Tem.png" alt="Contacto"
+                        data-hover="image/botones_barra_nav/Tem_Selec.png"></a></li>
+        </ul>
+    </nav>
+
+    <main class="content">
+        <div class="anuncio1">
+            <img src="image/card_para_anuncios/Cuadro de texto.png" alt="">
+            <div class="titulo_card1">
+                <h1>Luces bioluminiscentes </h1>
+            </div>
+            <div class="texto_card1">
+                <p>Los habitantes suelen utilizarlas en sus caminos a la porterna de reconexión, aguardando la llegada
+                    de los guardianes; funcionan como un objeto simbólico que remite a los guardianes por su color azul.
+                </p>
+            </div>
+        </div>
+
+        <div class="anuncio2">
+            <img src="image/card_para_anuncios/Cuadro de texto.png" alt="">
+            <div class="titulo_card2">
+                <h1>Esculturas biodegradables</h1>
+            </div>
+            <div class="texto_card2">
+                <p>Estas esculturas se degradan con la llegada de los Guardianes, liberando diminutas luces azules al
+                    aire.</p>
+            </div>
+        </div>
+
+        <div class="anuncio3">
+            <img src="image/card_para_anuncios/Cuadro de texto.png" alt="">
+            <div class="titulo_card3">
+                <h1>Sapucai</h1>
+            </div>
+            <div class="texto_card3">
+                <p>El gran recibimiento a los guardianes es acompañado con un sapucai colectivo.</p>
+            </div>
+        </div>
+
+        <div class="anuncio4">
+            <img src="image/card_para_anuncios/Cuadro de texto.png" alt="">
+            <div class="titulo_card4">
+                <h1>Ayuno</h1>
+            </div>
+            <div class="texto_card4">
+                <p>Nada mejor que mantener un estómago vacío y preparado para el verdadero festín.</p>
+            </div>
+        </div>
+
+        <div class="anuncio5">
+            <img src="image/card_para_anuncios/Cuadro de texto.png" alt="">
+            <div class="titulo_card5">
+                <h1>Sopa de domo</h1>
+            </div>
+            <div class="texto_card5">
+                <p>Un plato tan nutritivo que te dejará con suficiente energía para todo el resto del día.</p>
+            </div>
+        </div>
+
+        <div class="anuncio6">
+            <img src="image/card_para_anuncios/Cuadro de texto.png" alt="">
+            <div class="titulo_card6">
+                <h1>Asado</h1>
+            </div>
+            <div class="texto_card6">
+                <p>Un plato tan tradicional de nuestra cultura, que no podría faltar bajo ninguna excusa.
+
+                </p>
+            </div>
+        </div>
+    </main>
+    <script>
+        const buttons = document.querySelectorAll('.nav-links img');
+
+        buttons.forEach(button => {
+            const original = button.src;
+            const hoverSrc = button.dataset.hover;
+
+            button.addEventListener('mouseenter', () => {
+                button.src = hoverSrc;
+            });
+
+            button.addEventListener('mouseleave', () => {
+                button.src = original;
+            });
+        });
+
+    </script>
+</body>
+
+</html>
