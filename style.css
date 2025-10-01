@@ -116,7 +116,7 @@ img {
 .btn4 { left: 30%; top: 40%; }
 .btn5 { left: 80%; top: 40%; }
 .btn6 { left: 70%; top: 70%; }
-.btn7 { left: 50%; top: 70%; }
+.btn7 { left: 10%; top: 70%; }
 
 .logoCen {
   position: absolute;
@@ -125,5 +125,6 @@ img {
   transform: translate(-50%, -50%);
   pointer-events: none;
 }
+
 
 
