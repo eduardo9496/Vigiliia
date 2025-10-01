@@ -107,35 +107,14 @@ img {
 }
 
 
-.btn1 {
-  left: 500px;
-  top: 80px;
-}
+.btn1 { left: 30%; top: 20%; }
+.btn2 { left: 60%; top: 20%; }
+.btn3 { left: 20%; top: 45%; }
+.btn4 { left: 70%; top: 45%; }
+.btn5 { left: 40%; top: 70%; }
+.btn6 { left: 55%; top: 70%; }
+.btn7 { left: 80%; top: 70%; }
 
-.btn3 {
-  left: 960px;
-  top: 80px;
-}
-
-.btn4 {
-  left: 380px;
-  top: 360px;
-}
-
-.btn5 {
-  left: 1140px;
-  top: 360px;
-}
-
-.btn6 {
-  left: 900px;
-  top: 600px;
-}
-
-.btn7 {
-  left: 600px;
-  top: 600px;
-}
 
 .logoCen img{
   -webkit-user-drag: none;
@@ -146,3 +125,4 @@ img {
   cursor: default;
   outline: none;
 }
+
