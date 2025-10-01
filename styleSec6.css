@@ -6,24 +6,25 @@
 }
 
 @font-face {
-  font-family: 'MiFuente';
-  src: url('fonts/Quattrocento-Regular.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
+    font-family: 'MiFuente';
+    src: url('fonts/Quattrocento-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
 }
 
 @font-face {
-  font-family: 'MiFuente';
-  src: url('fonts/Quattrocento-Bold.ttf') format('truetype');
-  font-weight: bold;
-  font-style: normal;
+    font-family: 'MiFuente';
+    src: url('fonts/Quattrocento-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
 }
 
 body {
     display: flex;
+    font-family: 'MiFuente', sans-serif;
     height: 96vh;
-
     background-image: url("image/fondoPantallas.png");
+    background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -60,32 +61,36 @@ body.fade-out {
 
 /* Scrollbar para Chrome, Edge, Brave, Safari */
 ::-webkit-scrollbar {
-  width: 12px; /* grosor de la barra */
+    width: 12px;
+    /* grosor de la barra */
 }
 
 /* Track con fondo negro */
 ::-webkit-scrollbar-track {
-  background: rgb(0, 0, 0); /* negro semi-transparente */
-  border-radius: 8px;
+    background: rgb(0, 0, 0);
+    /* negro semi-transparente */
+    border-radius: 8px;
 }
 
 /* Thumb visible */
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient(180deg, #0ff, #00f); /* degradado futurista */
-  border-radius: 10px;
-  box-shadow: 0 0 10px #0ff, 0 0 20px #00f;
+    background: linear-gradient(180deg, #0ff, #00f);
+    /* degradado futurista */
+    border-radius: 10px;
+    box-shadow: 0 0 10px #0ff, 0 0 20px #00f;
 }
 
 /* Hover sobre la barra */
 ::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(180deg, #0ff, #0f0);
-  box-shadow: 0 0 15px #0ff, 0 0 25px #0f0;
+    background: linear-gradient(180deg, #0ff, #0f0);
+    box-shadow: 0 0 15px #0ff, 0 0 25px #0f0;
 }
 
 /* Firefox */
 * {
-  scrollbar-width: thin;
-  scrollbar-color: #0ff rgba(0,0,0); /* thumb visible, track negro */
+    scrollbar-width: thin;
+    scrollbar-color: #0ff rgba(0, 0, 0);
+    /* thumb visible, track negro */
 }
 
 
